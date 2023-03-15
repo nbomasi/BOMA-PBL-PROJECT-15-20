@@ -77,35 +77,7 @@ https://www.terraform.io/docs/cli/commands/graph.html
 - check the website
 
 
-### Draw back in the scripts
-- Direct hardcoding of values
-- Inputting credentials directly in the script
-
-- Useful links for windows users
-https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement
-https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse
-https://medium.com/risan/upgrade-your-ssh-key-to-ed25519-c6e8d60d3c54
 
 
-**Challenges and Solution**
 
-1. Ansible did not see aws infrastructure: aws configure
-
-3. Ansible did not update db info: I had to vi into wp-config.php to rectify
-
-4. I realised that when autoscale scale in to zero, all ansible installed data are lost.
-
-5. The servers could not download from the internet: I had to create route table using Natgateway as route
-
-6. Target groups were not automatically registered: I had to manually register them before my instances could be healthy
-
-7. Pip installation was not in the user data for creating AMIs, hence, boto and boto3 were not automatical installed: I had to install manualy, I have corrected the script though.
-
-8. Although, the wordpress site did not open though, but tooling opens as expected
-
-Final Image:
-
-![tooling-website](PROJECT19/Images/Tooling-image.png)
-
-![wordpress-website](PROJECT19/Images/wordpress.PNG)
 
