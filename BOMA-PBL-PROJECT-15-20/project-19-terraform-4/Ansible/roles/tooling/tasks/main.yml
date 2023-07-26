@@ -5,7 +5,7 @@
     src: fs-06a94046bc85a62be:/
     fstype: efs
     opts: nosuid,noexec,defaults,tls,accesspoint=fsap-07c2667e1055ea161
-    state: mounted
+    state: present
 
 - name: install httpd on the webserver
   ansible.builtin.yum:
